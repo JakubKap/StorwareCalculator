@@ -1,13 +1,15 @@
 package com.storware.app;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import com.storware.logic.Calculator;
+import com.storware.logic.FileReader;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Calculator calculator = new Calculator();
+        new FileReader(calculator).readDataFromFile();
+
+        calculator.generateFinalResult();
     }
 }
